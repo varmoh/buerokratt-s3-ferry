@@ -47,6 +47,7 @@ export class AppService {
           break;
       }
     } catch (error) {
+      console.log(error);
       throw error instanceof FileNotFoundException
         ? new FileNotFoundException(error.message)
         : new InternalServerException();
